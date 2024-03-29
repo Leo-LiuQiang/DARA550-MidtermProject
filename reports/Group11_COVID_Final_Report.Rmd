@@ -18,9 +18,9 @@ opts_chunk$set(
 ```
 
 ```{r, load-data}
-here::i_am("Group11_COVID_Final_Report.Rmd")
+here::i_am("reports/Group11_COVID_Final_Report.Rmd")
 data <- readRDS(
-  file = here::here("derived_data/data_clean.rds")
+  file = here::here("data/derived_data/data_clean.rds")
 )
 ```
 
@@ -34,7 +34,7 @@ Our study is examining the impact of diabetes on adverse COVID19 outcomes, inclu
 
 ```{r, table1}
 table_one <- readRDS(
-  file = here::here("tables/table_1.rds")
+  file = here::here("output/table_1.rds")
 )
 table_one
 ```
@@ -49,13 +49,15 @@ Below we report on the data distributions for continuous and categorical variabl
 
 # Logistic Regression Analyses
 
-## Model 1:
+## Model 1: Association Between Diabetes and Death From COVID-19
 
-In this analysis, we examine the question of whether or not having diabetes increases one's risk for COVID-19 death. 
+In this analysis, we assess the association between diabetes and death from COVID-19. We adjusted for sex, age, obesity status, presence of chronic renal disease, and smoking status. We conducted a logistic regression model using a generalized linear model with the binomial family and logit link. We identified a positive association between diabetes and death from COVID-19.The odds of death from COVID-19 among people with Diabetes is 1.85 (95% CI: 1.76, 1.95, P=<0.001) times the odds of death from COVID-19 among people without Diabetes.
 
 
 ```{r, fit-model1}
-
+readRDS(
+  file =here::here("output/Model1_table.RDS")
+)
 
 ```
 
