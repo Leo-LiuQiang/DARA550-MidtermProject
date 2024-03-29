@@ -61,11 +61,15 @@ readRDS(
 
 ```
 
-## Model 2: 
+## Model 2: Association Between Diabetes and Hospitalizations due to Covid-19 
 
-In this analysis, we examine the question of whether or not having diabetes increases one's risk for hospitalization. 
+To further examine the association of having diabetes and the likelihood of hospitalizations among patients, we conducted a logistic regression analysis. The model included predictors such as diabetes, age, sex, obesity, tobacco use, and chronic renal  conditions. Our results revealed that individuals with diabetes had 2.10 times higher odds of being hospitalized compared to those without diabetes (95% CI: 2.00-2.19, p < 0.001). Age was also found to be a significant predictor, with each year increase in age associated with a 6% increase in the odds of hospitalization (OR: 1.06, 95% CI: 1.06-1.06, p < 0.001). Males exhibited 1.65 times higher odds of hospitalization compared to females (95% CI: 1.59-1.71, p < 0.001). Additionally, obesity was associated with a 1.36 times higher odds of hospitalization (95% CI: 1.31-1.42, p < 0.001). However, there was no significant association between tobacco use and hospitalization odds (OR: 1.01, 95% CI: 0.94-1.08, p = 0.8). Patients with renal chronic conditions had 3.41 times higher odds of hospitalization compared to those without such conditions (95% CI: 3.02-3.85, p < 0.001). These findings underscore the importance of managing chronic conditions like diabetes, as well as identifying the influence of factors like age, sex, obesity and renal health that increase the likelihood of hospitalization of COVID-19 patients. This would further assist in creating targeted management and intervention strategies to reduce complication and prevent hospitalizations.
 
 ```{r, fit-model2}
+
+readRDS(
+  file =here::here("output/Model2_table.RDS")
+)
 
 ```
 
