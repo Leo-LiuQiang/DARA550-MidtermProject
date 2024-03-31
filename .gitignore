@@ -1,0 +1,6 @@
+output/*.png
+output/*.RDS
+output/*.rds
+reports/*.html
+reports/*.pdf
+*.pdf

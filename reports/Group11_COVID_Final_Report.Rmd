@@ -2,12 +2,11 @@
 title: "Group 11 Final Report: Examining Risk Factors for Adverse COVID-19 Outcomes"
 author: "Khadijah Abdallah, Leo Liu, Manju Ramakrishnan, Sarina Abrishamcar, Weiwei Wu"
 date: "`r Sys.Date()`"
-output: html_document
 params:
+  color_scheme: "blues"
+  show_legend: TRUE
   production: TRUE
 ---
-
-
 
 
 ```{r, set-chunk-opts, echo = FALSE, warning=FALSE}
@@ -39,13 +38,60 @@ table_one <- readRDS(
 table_one
 ```
 
-## Data Distributions
+## Exploratory Data Analysis
 
 Below we report on the data distributions for continuous and categorical variables. 
 
-```{r, }
-
+```{r, library, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
 ```
+  
+```{r, echo=FALSE, message=FALSE}
+here::i_am("reports/Group11_COVID_Final_Report.Rmd")
+```
+
+ 
+##### Outcome Variable  
+  
+  
+```{r, out.width="30%", fig.cap="", echo=FALSE}
+knitr::include_graphics(here::here("output", "descriptive_outcome_barplt.png"))
+```
+  
+The figure below is the distribution of the outcome variable `Death Status`, which is imbalanced.    
+  
+\ \   
+  
+##### Continuous Variable  
+  
+```{r, out.width="100%", fig.cap="", echo=FALSE}
+knitr::include_graphics(here::here("output", "descriptive_countinuous_plt.png"))
+```
+  
+- Age by Death Status (Histogram): The overall and survived patient's age distribution in the dataset are right-skewed.   
+- Age by Death Status grouped by Diabetes Status (Boxplot): Patients died with diabetes are slightly older than those who died without diabetes.   
+- Age by Patient Type (Boxplot): Hospitalized patients who died had a higher median age compared to those who returned home.   
+
+\ \ 
+  
+##### Categorical Variables
+
+```{r, out.width="100%", fig.cap="", echo=FALSE}
+knitr::include_graphics(here::here("output", "descriptive_categorical_pieplt.png"))
+```
+  
+The pie charts above visualized categorical variables that included in the Table 1.     
+\ \   
+  
+  
+```{r, out.width="100%", fig.cap="", echo=FALSE}
+knitr::include_graphics(here::here("output", "descriptive_categorical_barplt.png"))
+```
+  
+- Diabetes by Death Status (Bar Plot): atients without diabites have a lower death rate than those with renal failure.  
+- Renal Failure by Death Status (Bar Plot): Patients without renal failure have a lower death rate than those with renal failure.  
+- Patient Type by Death Status (Bar Plot): The returning home patients have a evidently lower death rate than those with hospitalized patients.  
 
 # Logistic Regression Analyses
 

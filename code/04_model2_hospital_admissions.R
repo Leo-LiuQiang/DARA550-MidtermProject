@@ -2,7 +2,13 @@
 #Model 2: Are those with Diabetes at increased risk for COVID-19 complications (i.e. Hospital admission)?
 #Covariates: age, sex, renal failure, obesity, tobacco
 
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+install.packages("gtsummary")
+install.packages("dplyr")
+install.packages("parameters")
 library(gtsummary)
+library(dplyr)
+library(parameters)
 
 here::i_am("code/04_model2_hospital_admissions.R")
 

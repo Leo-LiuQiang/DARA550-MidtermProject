@@ -1,5 +1,3 @@
-setwd("C:/Users/keabdal/OneDrive - Emory University/6_Post QEs Courses/INFO550 Data Science Toolkit_Spring 2024/Projects/Midterm Project")
-
 here::i_am ("code/00_clean_data.R")
 
 #Reading in data

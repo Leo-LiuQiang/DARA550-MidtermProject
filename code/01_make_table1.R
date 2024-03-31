@@ -1,5 +1,3 @@
-setwd("C:/Users/keabdal/OneDrive - Emory University/6_Post QEs Courses/INFO550 Data Science Toolkit_Spring 2024/Projects/Midterm Project")
-
 here::i_am("code/01_make_table1.R")
 
 data <- readRDS(
@@ -9,7 +7,7 @@ data <- readRDS(
 library(gtsummary)
 param=2
 
-table_one <- Finalcovid |>
+table_one <- data |>
   # Recode SEX variable to labels
   dplyr::mutate(SEX = ifelse(SEX == 1, "Female", "Male")) |>
   dplyr::mutate(DIABETES = ifelse(DIABETES == 1, "Diabetic", "Non-Diabetic")) |>
