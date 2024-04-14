@@ -66,6 +66,7 @@
 # How to reproduce the report in terminal
 - cd "/workpath_where_files_stored"
 - make clean (clean all outputs)
+- make install (will automatically install all packages needed)
 - make (will automatically generate all results and report)
 
 # Customized version of report

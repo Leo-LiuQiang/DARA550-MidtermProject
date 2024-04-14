@@ -4,3 +4,4 @@ output/*.rds
 reports/*.html
 reports/*.pdf
 *.pdf
+data/derived_data/*.rds
