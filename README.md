@@ -68,6 +68,7 @@
 - make clean (clean all outputs)
 - make (will automatically generate all results and report)
 
+# Customized version of report
 ## Using config to change output format in terminal
 - export WHICH_OUTPUT=pdf (Eligible choices: default (html), pdf, tufte)
 - make

@@ -32,3 +32,7 @@ output/Model2_table.RDS: code/04_model2_hospital_admissions.R data/derived_data/
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f output/*.png && rm -f reports/*.html && rm -f output/*RDS && rm -f reports/*.pdf
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"

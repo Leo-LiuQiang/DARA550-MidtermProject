@@ -1,14 +1,11 @@
 #Model 1: Are those with diabetes at increased risk for COVID-19 death?
 #Covariates: age, sex, renal failure, obesity, tobacco
 
-packages<-c("here","gtsummary")
-for(package in packages){
-  if(!require(package,character.only = T,quietly = T)){
-    install.packages(package,repos="http://lib.stat.cmu.edu/R/CRAN/")
-  }
-}
-
 here::i_am("code/03_model1_covid_death.R")
+
+library(here)
+library(gtsummary)
+library(car)
 
 data <- readRDS(
   file = here::here("data/derived_data/data_clean.rds")
